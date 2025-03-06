@@ -1,7 +1,7 @@
-#include "../../include/Level/LevelVeiw.h"
-#include "../../include/Global/ServiceLocator.h"
-#include "../../include/Graphics/GraphicService.h"
-#include "../../include/UI/UIElement/RectangleShapeView.h"
+#include "Level/LevelVeiw.h"
+#include "Global/ServiceLocator.h"
+#include "Graphics/GraphicService.h"
+#include "UI/UIElement/RectangleShapeView.h"
 
 namespace Level
 {
@@ -12,7 +12,7 @@ namespace Level
 	LevelView::LevelView() { createViews(); }
 	LevelView::~LevelView() { destroy(); }
 
-	void LevelView::initilize()
+	void LevelView::initialize()
 	{
 		initializeBackground();
 		calcuateGridExtents();
@@ -51,7 +51,7 @@ namespace Level
 	{
 		sf::RenderWindow* game_window = ServiceLocator::getInstance()->getGraphicService()->getGameWindow();
 
-		sf::Vector2f border_size = sf::Vector2f(grid_width, grid_hight);
+		sf::Vector2f border_size = sf::Vector2f(grid_width, grid_height);
 
 		sf::Vector2f border_position = sf::Vector2f(border_offset_left, border_offset_top);
 
@@ -65,7 +65,7 @@ namespace Level
 		sf::RenderWindow* game_window = ServiceLocator::getInstance()->getGraphicService()->getGameWindow();
 
 		grid_width = game_window->getSize().x - 2 * border_offset_left;
-		grid_hight = game_window->getSize().y - 2 * border_offset_top;
+		grid_height = game_window->getSize().y - 2 * border_offset_top;
 	}
 
 	void LevelView::destroy()
@@ -77,6 +77,11 @@ namespace Level
 	float LevelView::getGridWidth()
 	{
 		return grid_width;
+	}
+
+	float LevelView::getGridHeight()
+	{
+		return grid_height;
 	}
 
 }

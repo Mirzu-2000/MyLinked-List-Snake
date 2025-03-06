@@ -16,7 +16,7 @@ namespace Level
 		UI::UIElement::RectangleShapeView* border_rectangle;
 
 		float grid_width;
-		float grid_hight;
+		float grid_height;
 
 		void createViews();
 		void initializeBackground();
@@ -33,12 +33,12 @@ namespace Level
 		LevelView();
 		~LevelView();
 
-		void initilize();
+		void initialize();
 		void update();
 		void render();
 
 		float getGridWidth();
-		float getGridHight();
+		float getGridHeight();
 
 
 
