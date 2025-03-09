@@ -1,8 +1,11 @@
 #include "Level/LevelService.h"
 #include "Level/LevelController.h"
+#include "Global/ServiceLocator.h"
+
 
 namespace Level 
 {
+	using namespace Global;
 	
    LevelService::LevelService()
    {
