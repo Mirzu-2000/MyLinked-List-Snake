@@ -1,6 +1,8 @@
 #include "Level/LevelService.h"
 #include "Level/LevelController.h"
 #include "Global/ServiceLocator.h"
+#include "Level/LevelModel.h"
+
 
 
 namespace Level 
@@ -23,9 +25,14 @@ namespace Level
 	   level_controller = new LevelController();
    }
 
-   void LevelService::initilize()
+   void LevelService::initialize()
    {
-	   level_controller->intitilize();
+	   level_controller->initialize();
+   }
+
+   void LevelService::update()
+   {
+	   level_controller->update();
    }
 
    void LevelService::render()

@@ -6,13 +6,14 @@ namespace Level
 
 	struct LevelData
 	{
-		LevelNumber level_index;
+		
 
 		LevelData(LevelNumber ind)
 		{
 			level_index = ind;
 		}
 
+		LevelNumber level_index;
 	};
 
 

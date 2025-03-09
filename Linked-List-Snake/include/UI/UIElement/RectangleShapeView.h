@@ -8,7 +8,7 @@ namespace UI
 		class RectangleShapeView : public UIView
 		{
 		protected:
-			sf :: RectangleShape rectangle_shape;
+			sf::RectangleShape rectangle_shape;
 
 		public:
 			RectangleShapeView();

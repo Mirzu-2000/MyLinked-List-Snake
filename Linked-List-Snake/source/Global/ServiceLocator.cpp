@@ -40,8 +40,8 @@ namespace Global
 		graphic_service->initialize();
 		sound_service->initialize();
 		event_service->initialize();
+		level_service->initialize();
 		ui_service->initialize();
-		level_service->initilize();
 		time_service->initialize();
 	}
 
@@ -88,8 +88,8 @@ namespace Global
 	GraphicService* ServiceLocator::getGraphicService() { return graphic_service; }
 
 	SoundService* ServiceLocator::getSoundService() { return sound_service; }
-
-	LevelService* ServiceLocator::getLevelService() { return level_service; }
+	
+	Level::LevelService* ServiceLocator::getLevelService() { return level_service; }
 
 	UIService* ServiceLocator::getUIService() { return ui_service; }
 

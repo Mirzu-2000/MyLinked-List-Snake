@@ -1,6 +1,6 @@
 #include "Level/LevelController.h"
-#include<Level/LevelModel.h>
-#include<Level/LevelVeiw.h>
+#include "Level/LevelModel.h"
+#include "Level/LevelView.h"
 
 namespace Level
 {
@@ -17,7 +17,7 @@ namespace Level
 	  delete level_view;
   }
 
-  void LevelController::intitilize()
+  void LevelController::initialize()
   {
 	  level_view->initialize();
 	  level_model->initialize(level_view->getGridWidth(), level_view->getGridHeight());
@@ -30,7 +30,7 @@ namespace Level
 
   void LevelController::render()
   {
-	  level_view->update();
+	  level_view->render();
   }
 
   float LevelController::getCellWidth()

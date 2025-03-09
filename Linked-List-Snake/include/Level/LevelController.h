@@ -18,7 +18,7 @@ namespace Level
 		LevelController();
 		~LevelController();
 
-		void intitilize();
+		void initialize();
 		void update();
 		void render();
 		

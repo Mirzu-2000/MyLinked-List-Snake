@@ -1,4 +1,4 @@
-#include "Level/LevelVeiw.h"
+#include "Level/LevelView.h"
 #include "Global/ServiceLocator.h"
 #include "Graphics/GraphicService.h"
 #include "UI/UIElement/RectangleShapeView.h"
@@ -19,17 +19,6 @@ namespace Level
 		initilizeBorder();
 	}
 
-	void LevelView::update()
-	{
-		background_rectangle->update();
-		border_rectangle->update();
-	}
-
-	void LevelView::render()
-	{
-		background_rectangle->render();
-		border_rectangle->render();
-	}
 
 	void LevelView::createViews()
 	{
@@ -72,6 +61,19 @@ namespace Level
 	{
 		delete background_rectangle;
 		delete border_rectangle;
+	}
+
+
+	void LevelView::update()
+	{
+		background_rectangle->update();
+		border_rectangle->update();
+	}
+
+	void LevelView::render()
+	{
+		background_rectangle->render();
+		border_rectangle->render();
 	}
 
 	float LevelView::getGridWidth()
