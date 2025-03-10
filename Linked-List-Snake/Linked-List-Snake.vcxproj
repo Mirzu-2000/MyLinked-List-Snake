@@ -30,6 +30,8 @@
     <ClInclude Include="include\Level\LevelService.h" />
     <ClInclude Include="include\Level\LevelView.h" />
     <ClInclude Include="include\Main\GameService.h" />
+    <ClInclude Include="include\Player\PlayerService.h" />
+    <ClInclude Include="include\Player\SnakeController.h" />
     <ClInclude Include="include\Sound\SoundService.h" />
     <ClInclude Include="include\Time\TimeService.h" />
     <ClInclude Include="include\UI\Credits\CreditsScreenUIController.h" />
@@ -57,6 +59,8 @@
     <ClCompile Include="source\Level\LevelService.cpp" />
     <ClCompile Include="source\Level\LevelView.cpp" />
     <ClCompile Include="source\Main\GameService.cpp" />
+    <ClCompile Include="source\Player\PlayerService.cpp" />
+    <ClCompile Include="source\Player\SnakeController.cpp" />
     <ClCompile Include="source\Sound\SoundService.cpp" />
     <ClCompile Include="source\Time\TimeService.cpp" />
     <ClCompile Include="source\UI\Credits\CreditsScreenUIController.cpp" />

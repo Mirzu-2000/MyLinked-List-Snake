@@ -25,6 +25,11 @@ namespace Level
 	   level_controller = new LevelController();
    }
 
+   void LevelService::spwanPlayer()
+   {
+	   ServiceLocator::getInstance()->getPlayerService()->spawnPlayer();
+   }
+
    void LevelService::initialize()
    {
 	   level_controller->initialize();

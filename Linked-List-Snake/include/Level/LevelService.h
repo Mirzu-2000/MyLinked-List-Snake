@@ -13,6 +13,8 @@ namespace Level {
 		LevelNumber current_level;
 
 		void createLevelController();
+		void spwanPlayer();
+
 		void destroy();
 
 
