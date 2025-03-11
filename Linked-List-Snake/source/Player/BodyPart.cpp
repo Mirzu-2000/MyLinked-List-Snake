@@ -49,6 +49,38 @@ namespace Player
 		this->direction = direction;
 	}
 
+	Direction BodyPart::getDirection()
+	{
+		return direction;
+	}
+
+	sf::Vector2i BodyPart::getNextPosition()
+	{
+		switch (direction)
+		{
+		case Player::Direction::UP:
+			return getNextPositionUp();
+		case Player::Direction::DOWN:
+			return getNextPositionDown();
+		case Player::Direction::LEFT:
+			return getNextPositionLeft();
+		case Player::Direction::RIGHT:
+			return getNextPositionRight();
+		default:
+			return grid_position;
+		}
+	}
+
+	sf::Vector2i BodyPart::getPosition()
+	{
+		return grid_position;
+	}
+
+	void BodyPart::setPosition(sf::Vector2i position)
+	{
+		grid_position = position;
+	}
+
 	void BodyPart::createBodyPartImage()
 	{
 		bodypart_image = new ImageView();
@@ -58,6 +90,11 @@ namespace Player
 	{
 		bodypart_image->initialize(Config::snake_body_texture_path, bodypart_width, bodypart_height, getBodyPartScreenPosition());
 		bodypart_image->setOriginAtCentre();
+	}
+
+	void BodyPart::setPosition(sf::Vector2i position)
+	{
+		grid_position = position;
 	}
 
 	sf::Vector2f BodyPart::getBodyPartScreenPosition()
@@ -81,6 +118,26 @@ namespace Player
 		case Player::Direction::RIGHT:
 			return 0.f;
 		}
+	}
+
+	sf::Vector2i BodyPart::getNextPositionUp()
+	{
+		return sf::Vector2i(grid_position.x, grid_position.y - 1);
+	}
+
+	sf::Vector2i BodyPart::getNextPositionDown()
+	{
+		return sf::Vector2i(grid_position.x, grid_position.y + 1);
+	}
+
+	sf::Vector2i BodyPart::getNextPositionLeft()
+	{
+		return sf::Vector2i(grid_position.x - 1, grid_position.y);
+	}
+
+	sf::Vector2i BodyPart::getNextPositionRight()
+	{
+		return sf::Vector2i(grid_position.x + 1, grid_position.y);
 	}
 
 
