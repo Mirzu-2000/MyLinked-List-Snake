@@ -32,11 +32,22 @@ namespace Player
 		initializeBodyPartImage();
 
 	}
+	void BodyPart::updatePosition()
+	{
+		bodypart_image->setPosition(getBodyPartScreenPosition());
+		bodypart_image->setRotation(getRotationAngle());
+		bodypart_image->update();
+	}
 
 	void BodyPart::render()
 	{
 		bodypart_image->render();
     }
+
+	void BodyPart::setDirection(Direction direction)
+	{
+		this->direction = direction;
+	}
 
 	void BodyPart::createBodyPartImage()
 	{
@@ -56,6 +67,22 @@ namespace Player
 
 		return sf::Vector2f(x_screen_position, y_screen_position);
 	}
+
+	float BodyPart::getRotationAngle()
+	{
+		switch (direction)
+		{
+		case Player::Direction::UP:
+			return 270.f;
+		case Player::Direction::DOWN:
+			return 90.f;
+		case Player::Direction::LEFT:
+			return 180.f;
+		case Player::Direction::RIGHT:
+			return 0.f;
+		}
+	}
+
 
 	void BodyPart::destroy() { delete bodypart_image; }
 	}
