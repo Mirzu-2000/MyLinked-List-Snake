@@ -26,8 +26,12 @@ namespace LinkedList
 		~SingleLinkedList();
 
 		void initialize(float width, float height, sf::Vector2i position, Player::Direction direction);
-
+		
+		void createHeadNode();
+		
 		void render();
+
+
 
 	};
 }

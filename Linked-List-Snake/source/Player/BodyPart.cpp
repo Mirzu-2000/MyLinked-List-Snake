@@ -13,7 +13,7 @@ namespace Player
 
 	BodyPart::BodyPart()
 	{
-		grid_position = sf::Vector2i(0, 0);
+		/*grid_position = sf::Vector2i(0, 0);*/
 		createBodyPartImage();
 	}
 	
@@ -90,11 +90,6 @@ namespace Player
 	{
 		bodypart_image->initialize(Config::snake_body_texture_path, bodypart_width, bodypart_height, getBodyPartScreenPosition());
 		bodypart_image->setOriginAtCentre();
-	}
-
-	void BodyPart::setPosition(sf::Vector2i position)
-	{
-		grid_position = position;
 	}
 
 	sf::Vector2f BodyPart::getBodyPartScreenPosition()
