@@ -14,6 +14,7 @@ namespace Level {
 
 		void createLevelController();
 		void spwanPlayer();
+		void spawnLevelElements(LevelNumber level_to_load);
 
 		void destroy();
 
