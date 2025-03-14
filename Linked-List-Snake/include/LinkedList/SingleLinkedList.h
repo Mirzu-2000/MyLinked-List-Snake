@@ -29,7 +29,9 @@ namespace LinkedList
 		void initialize(float width, float height, sf::Vector2i position, Player::Direction direction);
 		
 		void insertNodeAtTail();
-		
+		void updateNodePosition();
+		void updateNodeDirection(Direction direction_to_set);
+
 		void render();
 
 

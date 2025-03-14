@@ -8,8 +8,15 @@ namespace Player
 	
 	class BodyPart
 	{
-	private:
+	
+	protected:
+		UI::UIElement::ImageView* bodypart_image;
 
+		sf::Vector2i grid_position;
+		Direction direction;
+		
+		float bodypart_width;
+		float bodypart_height;
 
 		void createBodyPartImage();
 		void initializeBodyPartImage();
@@ -23,18 +30,6 @@ namespace Player
 		sf::Vector2i getNextPositionRight();
 
 		void destroy();
-	
-	protected:
-		UI::UIElement::ImageView* bodypart_image;
-
-		sf::Vector2i grid_position;
-		Direction direction;
-		
-		float bodypart_width;
-		float bodypart_height;
-
-
-	
 
 	public:
 		BodyPart();
