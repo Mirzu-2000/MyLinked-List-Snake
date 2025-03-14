@@ -14,23 +14,31 @@ namespace Player
         DEAD,
     };
 
+    enum class InoutState
+    {
+        WAITING,
+        PROCESSING
+    };
+
     class SnakeController
     {
     private:
         const int initial_snake_length = 10;
         const float movement_frame_duration = 0.1f;
-        const float restart_duration = 2.f;
+        const float restart_duration = 3.f;
 
         const sf::Vector2i default_position = sf::Vector2i(25, 13);
-        const Direction default_direction = Direction::RIGHT;
+        const LinkedList::Direction default_direction = LinkedList::Direction::RIGHT;
 
         SnakeState current_snake_state;
         LinkedList::Direction current_snake_direction;
+        LinkedList::SingleLinkedList* single_linked_list;
+        InoutState current_input_state;
 
         float elapsed_duration;
         float restart_counter;
 
-        LinkedList::SingleLinkedList* single_linked_list;
+        void createLinkedList();
 
         void processPlayerInput();
         void updateSnakeDirection();
@@ -39,7 +47,6 @@ namespace Player
         void processSnakeCollision();
         void handleRestart();
 
-        void createLinkedList();
 
         void reset();
         void destroy();
