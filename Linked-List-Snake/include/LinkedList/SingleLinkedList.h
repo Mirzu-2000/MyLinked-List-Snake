@@ -31,6 +31,7 @@ namespace LinkedList
 		void insertNodeAtTail();
 		void updateNodePosition();
 		void updateNodeDirection(Direction direction_to_set);
+		bool processNodeCollision();
 
 		void render();
 
