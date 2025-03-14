@@ -32,6 +32,8 @@ namespace LinkedList
 		void updateNodePosition();
 		void updateNodeDirection(Direction direction_to_set);
 		bool processNodeCollision();
+		void removeNodeAtHead();
+		void removeAllNodes();
 
 		void render();
 
