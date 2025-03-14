@@ -19,6 +19,8 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="include\Element\ElementData.h" />
+    <ClInclude Include="include\Element\Obstacle.h" />
     <ClInclude Include="include\Event\EventService.h" />
     <ClInclude Include="include\Global\Config.h" />
     <ClInclude Include="include\Global\ServiceLocator.h" />
@@ -54,6 +56,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="source\Element\Obstacle.cpp" />
     <ClCompile Include="source\Event\EventService.cpp" />
     <ClCompile Include="source\Global\Config.cpp" />
     <ClCompile Include="source\Global\ServiceLocator.cpp" />
