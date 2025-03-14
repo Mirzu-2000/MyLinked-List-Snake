@@ -9,7 +9,7 @@ namespace LinkedList
 
     SingleLinkedList::~SingleLinkedList() = default;
 
-    void SingleLinkedList::initialize(float width, float height, sf::Vector2i position, Player::Direction direction)
+    void SingleLinkedList::initialize(float width, float height, sf::Vector2i position, Direction direction)
     {
         node_width = width;
         node_height = height;
@@ -19,18 +19,63 @@ namespace LinkedList
 
     void SingleLinkedList::render()
     {
-        head_node->body_part.render();
+        Node* cur_node = head_node;
+
+        while (cur_node != nullptr)
+        {
+            cur_node->body_part.render();
+            cur_node = cur_node->next;
+        }
     }
 
-    void SingleLinkedList::createHeadNode()
+    void SingleLinkedList::insertNodeAtTail()
     {
-        head_node = createNode();
-        head_node->body_part.initialize(node_width, node_height, default_position, default_direction);
-        return;
+       
+        Node* new_node = createNode();
+        Node* cur_node = head_node;
+
+        if (cur_node == nullptr)
+        {
+            head_node = new_node;
+            new_node->body_part.initialize(node_width, node_height, default_position, default_direction);
+            return;
+        }
+
+        while (cur_node->next != nullptr) { cur_node = cur_node->next; }
+
+        cur_node->next = new_node;
+        new_node->body_part.initialize(node_width, node_height, getNewNodePosition(cur_node), cur_node->body_part.getDirection());
     }
 
    Node* SingleLinkedList::createNode()
     {
         return new LinkedList::Node();
     }
+
+   sf::Vector2i SingleLinkedList::getNewNodePosition(Node* reference_node)
+   {
+       Direction reference_direction = reference_node->body_part.getDirection();
+       sf::Vector2i reference_position = reference_node->body_part.getPosition();
+
+       switch (reference_direction)
+       {
+       case Player::Direction::UP:
+           return sf::Vector2i(reference_position.x, reference_position.y - 1);
+           break;
+       case Player::Direction::DOWN:
+           return sf::Vector2i(reference_position.x, reference_position.y + 1);
+           break;
+       case Player::Direction::LEFT:
+           return sf::Vector2i(reference_position.x + 1, reference_position.y);
+           break;
+       case Player::Direction::RIGHT:
+           return sf::Vector2i(reference_position.x - 1, reference_position.y);
+           break;
+       }
+
+       return default_position;
+   }
+
+
+
 }

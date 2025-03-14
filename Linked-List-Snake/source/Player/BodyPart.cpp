@@ -13,7 +13,7 @@ namespace Player
 
 	BodyPart::BodyPart()
 	{
-		/*grid_position = sf::Vector2i(0, 0);*/
+		grid_position = sf::Vector2i(0, 0);
 		createBodyPartImage();
 	}
 	
@@ -137,4 +137,5 @@ namespace Player
 
 
 	void BodyPart::destroy() { delete bodypart_image; }
+
 	}

@@ -8,6 +8,21 @@ namespace Player
 	
 	class BodyPart
 	{
+	private:
+
+
+		void createBodyPartImage();
+		void initializeBodyPartImage();
+
+		sf::Vector2f getBodyPartScreenPosition();
+		float getRotationAngle();
+
+		sf::Vector2i getNextPositionUp();
+		sf::Vector2i getNextPositionDown();
+		sf::Vector2i getNextPositionLeft();
+		sf::Vector2i getNextPositionRight();
+
+		void destroy();
 	
 	protected:
 		UI::UIElement::ImageView* bodypart_image;
@@ -18,17 +33,8 @@ namespace Player
 		float bodypart_width;
 		float bodypart_height;
 
-		void createBodyPartImage();
-		void initializeBodyPartImage();
-		sf::Vector2f getBodyPartScreenPosition();
-		float getRotationAngle();
 
-		sf::Vector2i getNextPositionUp();
-		sf::Vector2i getNextPositionDown();
-		sf::Vector2i getNextPositionLeft();
-		sf::Vector2i getNextPositionRight();
-
-		void destroy();
+	
 
 	public:
 		BodyPart();

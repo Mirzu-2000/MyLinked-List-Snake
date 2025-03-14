@@ -19,6 +19,7 @@ namespace LinkedList
 		Player::Direction default_direction;
 
 		Node* createNode();
+		sf::Vector2i getNewNodePosition(Node* reference_node);
 
 
 	public:
@@ -27,7 +28,7 @@ namespace LinkedList
 
 		void initialize(float width, float height, sf::Vector2i position, Player::Direction direction);
 		
-		void createHeadNode();
+		void insertNodeAtTail();
 		
 		void render();
 
