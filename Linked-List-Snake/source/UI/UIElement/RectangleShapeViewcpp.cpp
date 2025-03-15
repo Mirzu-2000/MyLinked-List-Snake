@@ -14,7 +14,7 @@ namespace UI
 			 
 			setSize(rectangle_size);
 			setPosition(rectangle_position);
-			setOutLineThickness(outline_thickness);
+			setOutlineThickness(outline_thickness);
 			setFillColor(fill_color);
 			setOutlineColor(outline_color);
 		}
@@ -56,7 +56,7 @@ namespace UI
 			rectangle_shape.setOutlineColor(outline_color);
 		}
 
-		void RectangleShapeView::setOutLineThickness(int outline_thickness)
+		void RectangleShapeView::setOutlineThickness(int outline_thickness)
 		{
 			rectangle_shape.setOutlineThickness(outline_thickness);
 		}

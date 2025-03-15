@@ -15,8 +15,8 @@ namespace Level
 	void LevelView::initialize()
 	{
 		initializeBackground();
-		calcuateGridExtents();
-		initilizeBorder();
+		calculateGridExtents();
+		initializeBorder();
 	}
 
 
@@ -36,7 +36,7 @@ namespace Level
 		background_rectangle->show();
 	}
 
-	void LevelView::initilizeBorder()
+	void LevelView::initializeBorder()
 	{
 		sf::RenderWindow* game_window = ServiceLocator::getInstance()->getGraphicService()->getGameWindow();
 
@@ -49,7 +49,7 @@ namespace Level
 		border_rectangle->show();
 	}
 
-	void LevelView::calcuateGridExtents()
+	void LevelView::calculateGridExtents()
 	{
 		sf::RenderWindow* game_window = ServiceLocator::getInstance()->getGraphicService()->getGameWindow();
 
@@ -59,8 +59,8 @@ namespace Level
 
 	void LevelView::destroy()
 	{
-		delete background_rectangle;
-		delete border_rectangle;
+		delete (background_rectangle);
+		delete (border_rectangle);
 	}
 
 

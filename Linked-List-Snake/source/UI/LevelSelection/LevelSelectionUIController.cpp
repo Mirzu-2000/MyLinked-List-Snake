@@ -21,8 +21,8 @@ namespace UI
 	{
 		LevelSelectionUIController::LevelSelectionUIController()
 		{
-			createImage();
 			createButtons();
+            createImage();
 
 		}
 
