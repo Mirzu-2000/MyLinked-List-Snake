@@ -25,7 +25,7 @@ namespace Level
 	   level_controller = new LevelController();
    }
 
-   void LevelService::spwanPlayer()
+   void LevelService::spawnPlayer()
    {
 	   ServiceLocator::getInstance()->getPlayerService()->spawnPlayer();
    }
@@ -59,7 +59,7 @@ namespace Level
    {
 	   current_level = level_to_load;
 	   spawnLevelElements(level_to_load);
-	   Player::PlayerService::spawnPlayer();
+	   spawnPlayer();
    }
 
    float LevelService::getCellWidth()

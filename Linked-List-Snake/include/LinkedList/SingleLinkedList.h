@@ -1,5 +1,5 @@
 #pragma once
-#include "SFML/System/Vector2.hpp"
+#include <SFML/System/Vector2.hpp>
 #include "LinkedList/Node.h"
 
 namespace LinkedList
@@ -16,7 +16,7 @@ namespace LinkedList
 		float node_height;
 
 		sf::Vector2i default_position;
-		Player::Direction default_direction;
+		Direction default_direction;
 
 		Node* createNode();
 		sf::Vector2i getNewNodePosition(Node* reference_node);

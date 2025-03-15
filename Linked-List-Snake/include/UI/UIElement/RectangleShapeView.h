@@ -24,7 +24,7 @@ namespace UI
 			
 			virtual void setFillColor(sf::Color fill_color);
 			virtual void setOutlineColor(sf::Color outline_color);
-			virtual void setOutLineThickness(int outline_thickness);
+			virtual void setOutlineThickness(int outline_thickness);
 
 
 

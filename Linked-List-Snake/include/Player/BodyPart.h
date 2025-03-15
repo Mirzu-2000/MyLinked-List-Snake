@@ -1,5 +1,5 @@
 #pragma once
-#include "SFML/Graphics.hpp"
+#include <SFML/Graphics.hpp>
 #include "UI/UIElement/ImageView.h"
 #include "Direction.h"
 
@@ -41,7 +41,7 @@ namespace Player
 
 		void render();
 
-		void setDirection(Direction direction);
+		void setDirection(Direction new_direction);
 		Direction getDirection();
 
 		void setPosition(sf::Vector2i position);

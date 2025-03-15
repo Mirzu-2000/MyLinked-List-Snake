@@ -106,7 +106,7 @@ namespace LinkedList
 
    Node* SingleLinkedList::createNode()
     {
-        return new LinkedList::Node();
+        return new Node();
     }
 
    sf::Vector2i SingleLinkedList::getNewNodePosition(Node* reference_node)
@@ -116,16 +116,16 @@ namespace LinkedList
 
        switch (reference_direction)
        {
-       case Player::Direction::UP:
+       case Direction::UP:
            return sf::Vector2i(reference_position.x, reference_position.y - 1);
            break;
-       case Player::Direction::DOWN:
+       case Direction::DOWN:
            return sf::Vector2i(reference_position.x, reference_position.y + 1);
            break;
-       case Player::Direction::LEFT:
+       case Direction::LEFT:
            return sf::Vector2i(reference_position.x + 1, reference_position.y);
            break;
-       case Player::Direction::RIGHT:
+       case Direction::RIGHT:
            return sf::Vector2i(reference_position.x - 1, reference_position.y);
            break;
        }

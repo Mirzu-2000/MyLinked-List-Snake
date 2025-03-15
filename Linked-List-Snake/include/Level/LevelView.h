@@ -20,8 +20,8 @@ namespace Level
 
 		void createViews();
 		void initializeBackground();
-		void initilizeBorder();
-		void calcuateGridExtents();
+		void initializeBorder();
+		void calculateGridExtents();
 		void destroy();
 
 

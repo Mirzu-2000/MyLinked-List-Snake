@@ -7,6 +7,6 @@ namespace Player
         UP,
         DOWN,
         LEFT,
-        RIGHT
+        RIGHT,
     };
 }
