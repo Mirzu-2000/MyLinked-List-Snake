@@ -22,16 +22,18 @@ namespace Element
         initializeObstacleImage();
     }
 
-    void Obstacle::update() { obstacle_image->update(); }
-
-    void Obstacle::render() { obstacle_image->render(); }
-
+   
     void Obstacle::initializeObstacleImage()
     {
         sf::Vector2f screen_position = getObstacleImagePosition();
         obstacle_image->initialize(Config::obstacle_texture_path, cell_width, cell_height, screen_position);
         obstacle_image->show();
     }
+
+    void Obstacle::update() { obstacle_image->update(); }
+
+    void Obstacle::render() { obstacle_image->render(); }
+
 
     sf::Vector2f Obstacle::getObstacleImagePosition()
     {
