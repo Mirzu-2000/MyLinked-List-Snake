@@ -4,6 +4,7 @@
 #include "Level/LevelModel.h"
 #include "Level/LevelController.h"
 #include "Element/Obstacle.h"
+#include "Element/ElementData.h"
 
 namespace Element
 {
@@ -44,4 +45,15 @@ namespace Element
         obstacle->initialize(position, cell_width, cell_height);
         obstacle_list.push_back(obstacle);
     }
+
+    std::vector<sf::Vector2i> ElementService::getElementsPositionList()
+    {
+        std::vector<sf::Vector2i> element_position_list;
+        for (int i = 0; i < obstacle_list.size(); i++)
+        {
+            element_position_list.push_back(obstacle_list[i]->getObstaclePosition());
+        }
+            return element_position_list;
+    }
+
 }

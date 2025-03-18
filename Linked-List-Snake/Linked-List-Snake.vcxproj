@@ -23,6 +23,9 @@
     <ClInclude Include="include\Element\ElementService.h" />
     <ClInclude Include="include\Element\Obstacle.h" />
     <ClInclude Include="include\Event\EventService.h" />
+    <ClInclude Include="include\Food\FoodItem.h" />
+    <ClInclude Include="include\Food\FoodService.h" />
+    <ClInclude Include="include\Food\FoodType.h" />
     <ClInclude Include="include\Global\Config.h" />
     <ClInclude Include="include\Global\ServiceLocator.h" />
     <ClInclude Include="include\Graphics\GraphicService.h" />
@@ -42,6 +45,7 @@
     <ClInclude Include="include\Sound\SoundService.h" />
     <ClInclude Include="include\Time\TimeService.h" />
     <ClInclude Include="include\UI\Credits\CreditsScreenUIController.h" />
+    <ClInclude Include="include\UI\GameplayUI\GameplayUIController.h" />
     <ClInclude Include="include\UI\Instructions\InstructionsScreenUIController.h" />
     <ClInclude Include="include\UI\Interface\IUIController.h" />
     <ClInclude Include="include\UI\LevelSelection\LevelSelectionUIController.h" />
@@ -60,6 +64,8 @@
     <ClCompile Include="source\Element\ElementService.cpp" />
     <ClCompile Include="source\Element\Obstacle.cpp" />
     <ClCompile Include="source\Event\EventService.cpp" />
+    <ClCompile Include="source\Food\FoodItem.cpp" />
+    <ClCompile Include="source\Food\FoodService.cpp" />
     <ClCompile Include="source\Global\Config.cpp" />
     <ClCompile Include="source\Global\ServiceLocator.cpp" />
     <ClCompile Include="source\Graphics\GraphicService.cpp" />
@@ -75,6 +81,7 @@
     <ClCompile Include="source\Sound\SoundService.cpp" />
     <ClCompile Include="source\Time\TimeService.cpp" />
     <ClCompile Include="source\UI\Credits\CreditsScreenUIController.cpp" />
+    <ClCompile Include="source\UI\GameplayUI\GameplayUIController.cpp" />
     <ClCompile Include="source\UI\Instructions\InstructionsScreenUIController.cpp" />
     <ClCompile Include="source\UI\LevelSelection\LevelSelectionUIController.cpp" />
     <ClCompile Include="source\UI\MainMenu\MainMenuUIController.cpp" />
