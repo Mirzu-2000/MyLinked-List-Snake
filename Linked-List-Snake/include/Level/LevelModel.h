@@ -67,7 +67,7 @@ namespace Level
         };
 
 	
-		std::vector<LevelData> level_configuarations;
+		std::vector<LevelData> level_configurations;
 		
 		float cell_width;
 		float cell_height;

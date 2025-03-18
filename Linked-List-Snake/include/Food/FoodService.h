@@ -11,7 +11,7 @@ namespace Food
     enum FoodSpawningStatus
     {
         ACTIVE,
-        IN_ACTIVE
+        IN_ACTIVE,
     };
 
     class FoodService
@@ -34,7 +34,7 @@ namespace Food
         float cell_height;
 
         const float spawn_duration = 4.f;
-        float elasped_duration;
+        float elapsed_duration;
 
         FoodSpawningStatus current_spawning_status;
         std::default_random_engine random_engine;
@@ -49,7 +49,7 @@ namespace Food
 
         bool isValidPosition(std::vector<sf::Vector2i> position_data, sf::Vector2i food_position);
 
-        void updateElaspedDuration();
+        void updateElapsedDuration();
         void handleFoodSpawning();
      
 

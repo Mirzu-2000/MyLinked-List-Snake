@@ -109,7 +109,6 @@ namespace LinkedList
         return new Node();
     }
 
-   Node* SingleLinkedList::getHeadNode() { return head_node; }
 
    sf::Vector2i SingleLinkedList::getNewNodePosition(Node* reference_node)
    {

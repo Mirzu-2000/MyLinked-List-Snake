@@ -10,6 +10,6 @@ namespace Food
         BURGER,
         CHEESE,
         POISION,
-        ALCOHOL
+        ALCOHOL,
     };
 }
